@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: House-Rent-Prediction-model
+Version: 0.0.0
+Summary: python package for project
+Home-page: https://github.com/karthik4-4/house-rent-prediction-model
+Author: karthik4-4
+Project-URL: Bug Tracker, https://github.com/karthik4-4/house-rent-prediction-model/issues
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
