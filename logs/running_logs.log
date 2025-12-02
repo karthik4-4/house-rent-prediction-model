@@ -1,1 +1,23 @@
 [2025-12-01 23:38:52,686 : INFO : main : Hi there this is a test message]
+[2025-12-02 19:26:16,176 : INFO : main : #### Starting Data Ingestion ####]
+[2025-12-02 19:26:16,181 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2025-12-02 19:26:16,184 : INFO : common : created directory at: artifacts]
+[2025-12-02 19:26:16,184 : INFO : common : created directory at: artifacts/data_ingestion]
+[2025-12-02 19:26:16,184 : ERROR : main : 'DataIngestionConfig' object has no attribute 'source_URL']
+Traceback (most recent call last):
+  File "C:\house-rent-prediction-model\main.py", line 8, in <module>
+    obj.main()
+  File "C:\house-rent-prediction-model\src\House_Rent_Prediction\pipeline\st_1_data_ingestion.py", line 13, in main
+    data_ingestion.download_file()
+  File "C:\house-rent-prediction-model\src\House_Rent_Prediction\components\data_ingestion.py", line 30, in download_file
+    raise e
+  File "C:\house-rent-prediction-model\src\House_Rent_Prediction\components\data_ingestion.py", line 18, in download_file
+    dataset_url = self.config.source_URL
+AttributeError: 'DataIngestionConfig' object has no attribute 'source_URL'
+[2025-12-02 19:29:35,183 : INFO : main : #### Starting Data Ingestion ####]
+[2025-12-02 19:29:35,186 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2025-12-02 19:29:35,186 : INFO : common : created directory at: artifacts]
+[2025-12-02 19:29:35,186 : INFO : common : created directory at: artifacts/data_ingestion]
+[2025-12-02 19:29:35,186 : INFO : data_ingestion : Downloading data from https://drive.google.com/file/d/1_OU_E76YpZQGGZpLhQmT8qoqksDNn14p/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-12-02 19:29:39,701 : INFO : data_ingestion : Downloaded data from https://drive.google.com/file/d/1_OU_E76YpZQGGZpLhQmT8qoqksDNn14p/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-12-02 19:29:39,723 : INFO : main : #### completed Data Ingestion stage ####]
