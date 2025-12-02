@@ -7,7 +7,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = 'house-rent-prediction-model'
 AUTHOR_USER_NAME = 'karthik4-4'
-SRC_REPO = 'House-Rent-Prediction-model'
+SRC_REPO = 'House_Rent_Prediction'
 
 setuptools.setup(
     name=SRC_REPO,

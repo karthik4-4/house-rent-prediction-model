@@ -8,7 +8,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-project_name = "House-Rent-Prediction-model"
+project_name = "House_Rent_Prediction"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
