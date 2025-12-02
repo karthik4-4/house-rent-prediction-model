@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.myenv/
+
+# Logs
+logs/
+*.log
+
+# Data and artifacts
+artifacts/
+data/
+*.csv
+*.zip
+
+# Model files
+models/
+*.pkl
+*.h5
+*.joblib
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# DVC cache
+.dvc/cache/
+
+# Environment variables
+.env
