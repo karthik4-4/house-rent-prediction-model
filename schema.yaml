@@ -13,4 +13,4 @@ COLUMNS :
   fire_insurance : int64 
 
 TARGET_COLUMN:
-  total_amount   : int64
+  name : total_amount
