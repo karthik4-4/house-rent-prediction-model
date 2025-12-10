@@ -12,7 +12,7 @@ logs/
 *.log
 
 # Data and artifacts
-artifacts/
+artifacts/*
 data/
 *.csv
 *.zip
@@ -20,7 +20,6 @@ data/
 # Model files
 models/
 *.pkl
-*.h5
 *.joblib
 
 # IDE and OS files
