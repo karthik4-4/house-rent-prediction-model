@@ -1,6 +1,6 @@
 from pathlib import Path
 from House_Rent_Prediction.utils.common import read_yaml,create_directories
-from House_Rent_Prediction.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformation
+from House_Rent_Prediction.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig
 from House_Rent_Prediction.constants import CONFIG_FILE_PATH,PARAMS_FILE_PATH,SCHEMA_FILE_PATH
 
 class ConfigurationManager:
@@ -31,11 +31,11 @@ class ConfigurationManager:
             data_schema = self.schema,
         )
     
-    def get_data_transform_config(self)->DataTransformation:
+    def get_data_transform_config(self)->DataTransformationConfig:
         config = self.config.data_transformation
         create_directories([config.root_dir])
 
-        return DataTransformation(
+        return DataTransformationConfig(
             root_dir = Path(config.root_dir),
             data_path = Path(config.data_path),
         )
