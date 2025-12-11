@@ -15,17 +15,11 @@ class DataValidation:
             columns = data.columns
 
             cols_of_schema = self.config.data_schema.COLUMNS.keys()
-            
-            print(columns)
-            print(cols_of_schema)
 
             for col in columns:
                 if col not in cols_of_schema and col!=self.config.data_schema.TARGET_COLUMN.name:
-                    print(f'{col} is not matched')
                     validation_status = False
                     break
-                else:
-                    print(f'{col} is matched')
 
             with open(self.config.status_file,'w') as f:
                 f.write(f'Validation Status : {validation_status}')
