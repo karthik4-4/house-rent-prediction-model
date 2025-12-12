@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/9a7503c9086547649f59bfe10160bbea/artifacts
+deleted_time: 1765561150521
+end_time: 1765560933026
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9a7503c9086547649f59bfe10160bbea
+run_name: rumbling-grub-671
+run_uuid: 9a7503c9086547649f59bfe10160bbea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765560929393
+status: 4
+tags: []
+user_id: thala

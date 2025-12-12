@@ -10,7 +10,8 @@ COLUMNS :
   Homeowners Association : int64 
   rent_amount    : int64 
   property_tax   : int64 
-  fire_insurance : int64 
+  fire_insurance : int64
+  total_amount : int64
 
 TARGET_COLUMN:
-  name : total_amount
+  name : rent_amount

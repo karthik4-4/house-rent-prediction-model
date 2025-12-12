@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/48bd52e77ee84cb3ad4a228b82fb6f25/artifacts
+end_time: 1765573741503
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 48bd52e77ee84cb3ad4a228b82fb6f25
+run_name: caring-doe-880
+run_uuid: 48bd52e77ee84cb3ad4a228b82fb6f25
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765573736932
+status: 4
+tags: []
+user_id: thala

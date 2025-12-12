@@ -11,3 +11,6 @@ class ModelTrainingPipeline:
         model_training_config = config.get_model_training_config()
         model_training = ModelTraining(model_training_config)
         model_training.train_poly()
+        model_training.train_random_forest()
+        model_training.train_xgboost()
+        model_training.train_mlp()

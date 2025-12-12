@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/5a9afccb4d6741cfb24529934a07ff66/artifacts
+deleted_time: 1765561150529
+end_time: 1765560729690
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5a9afccb4d6741cfb24529934a07ff66
+run_name: exultant-gnu-178
+run_uuid: 5a9afccb4d6741cfb24529934a07ff66
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765560723816
+status: 4
+tags: []
+user_id: thala

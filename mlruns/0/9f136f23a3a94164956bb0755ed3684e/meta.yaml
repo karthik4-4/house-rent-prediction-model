@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/9f136f23a3a94164956bb0755ed3684e/artifacts
+end_time: 1765561000687
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9f136f23a3a94164956bb0755ed3684e
+run_name: unique-kite-537
+run_uuid: 9f136f23a3a94164956bb0755ed3684e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765560997138
+status: 3
+tags: []
+user_id: thala

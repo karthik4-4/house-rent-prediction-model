@@ -20,13 +20,19 @@ data_transformation:
 model_training:
   root_dir: artifacts/model_training
   train_data_path: artifacts/data_transformation/train.csv
-  model_name: model.joblib
+  model_1: poly_reg.joblib
+  model_2: random_forest.joblib
+  model_3: xgboost.joblib
+  model_4: mlp.joblib
 
 model_evaluation:
   root_dir: artifacts/model_evaluation
   test_data_path: artifacts/data_transformation/test.csv
-  model_path: artifacts/model_training/model.joblib
-  polynomial_feat_extr: artifacts/model_training/polynomial_feat_extr.joblib
+  poly_reg_path: artifacts/model_training/poly_reg.joblib
+  polynomial_feat_extr_path: artifacts/model_training/polynomial_feat_extr.joblib
+  random_forest_path: artifacts/model_training/random_forest.joblib
+  xgboost_path: artifacts/model_training/xgboost.joblib
+  mlp_path: artifacts/model_training/mlp.joblib
   metric_file_name: artifacts/model_evaluation/metrics.json
 
   

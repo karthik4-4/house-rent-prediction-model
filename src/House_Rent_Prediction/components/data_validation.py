@@ -17,7 +17,7 @@ class DataValidation:
             cols_of_schema = self.config.data_schema.COLUMNS.keys()
 
             for col in columns:
-                if col not in cols_of_schema and col!=self.config.data_schema.TARGET_COLUMN.name:
+                if col not in cols_of_schema:
                     validation_status = False
                     break
 

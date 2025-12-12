@@ -45,30 +45,68 @@ class ConfigurationManager:
     def get_model_training_config(self)->ModelTrainingConfig:
         config = self.config.model_training
         create_directories([config.root_dir])
-        params = self.params.Polynomial_regression
+        poly_params = self.params.Polynomial_regression
+        random_params = self.params.Random_Forest
+        xgboost_params = self.params.XGBoost
+        mlp_params = self.params.MLP
         schema = self.schema.TARGET_COLUMN
 
+
         return ModelTrainingConfig(
-            root_dir = Path(config.root_dir),
             train_data_path = Path(config.train_data_path),
-            model_name = config.model_name,
-            degree = params.degree,
-            target_columns = schema.name,
+            root_dir = Path(config.root_dir),
+            target_column = schema.name,
+
+            model_1 = config.model_1,       # Polynomial
+            degree = poly_params.degree,
+
+            
+            model_2 = config.model_2,        # Random Forest
+            rf_n_estimators = random_params.rf_n_estimators,
+            rf_max_depth = random_params.rf_max_depth,
+            rf_min_samples_split = random_params.rf_min_samples_split,
+            rf_min_samples_leaf = random_params.rf_min_samples_leaf,
+
+
+            model_3 = config.model_3,         # XGBoost
+            xgb_n_estimators = xgboost_params.xgb_n_estimators,
+            xgb_learning_rate = xgboost_params.xgb_learning_rate,
+            xgb_max_depth = xgboost_params.xgb_max_depth,
+            xgb_subsample = xgboost_params.xgb_subsample,
+            xgb_colsample_bytree = xgboost_params.xgb_colsample_bytree,
+            xgb_reg_lambda = xgboost_params.xgb_reg_lambda,
+
+            model_4 = config.model_4,         # MLP
+            mlp_hidden_layers = mlp_params.mlp_hidden_layers,
+            mlp_activation = mlp_params.mlp_activation,
+            mlp_solver = mlp_params.mlp_solver,
+            mlp_learning_rate = mlp_params.mlp_learning_rate,
+            mlp_max_iter = mlp_params.mlp_max_iter,
+
         )
 
     def get_model_evaluation_config(self)->ModelEvaluationConfig:
         config = self.config.model_evaluation
         create_directories([config.root_dir])
-        params = self.params.Polynomial_regression
+        poly_params = self.params.Polynomial_regression
+        random_params = self.params.Random_Forest
+        xgboost_params = self.params.XGBoost
+        mlp_params = self.params.MLP
         schema = self.schema.TARGET_COLUMN
 
 
         return ModelEvaluationConfig(
             root_dir = Path(config.root_dir),
             test_data_path = Path(config.test_data_path),
-            model_path = Path(config.model_path),
-            polynomial_feat_extr = Path(config.polynomial_feat_extr),
+            poly_reg_path = Path(config.poly_reg_path),
+            polynomial_feat_extr_path = Path(config.polynomial_feat_extr_path),
+            random_forest_path = Path(config.random_forest_path),
+            xgboost_path = Path(config.xgboost_path),
+            mlp_path = Path(config.mlp_path),
             metric_file_name = Path(config.metric_file_name),
+            poly_reg_params = poly_params,
+            random_forest_parmas = random_params,
+            xg_boost_params = xgboost_params,
+            mlp_params = mlp_params,
             target_column = schema.name,
-            all_params = params,
         )

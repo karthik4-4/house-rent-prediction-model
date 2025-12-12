@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/2edc1e160af1421eb85669c6a6c10b51/artifacts
+end_time: 1765574138871
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2edc1e160af1421eb85669c6a6c10b51
+run_name: redolent-kite-773
+run_uuid: 2edc1e160af1421eb85669c6a6c10b51
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765574114930
+status: 3
+tags: []
+user_id: thala

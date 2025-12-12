@@ -27,7 +27,9 @@ class DataTransformation:
             data = data[(data[col] >= lower) & (data[col] <= upper)]
       
         logger.info(f'Removed Outliers...')
-
+        
+        logger.info("Removing unwanted columns")
+        data = data.drop(columns = ['Homeowners Association', 'property_tax','fire_insurance', 'total_amount'],axis=1)
 
         data = pd.get_dummies(data,columns=['City', 'pets', 'furnished'], drop_first=True,dtype=int)
         logger.info(f'Encoded categorical variables...')
