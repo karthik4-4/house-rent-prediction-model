@@ -67,6 +67,7 @@ class ConfigurationManager:
             root_dir = Path(config.root_dir),
             test_data_path = Path(config.test_data_path),
             model_path = Path(config.model_path),
+            polynomial_feat_extr = Path(config.polynomial_feat_extr),
             metric_file_name = Path(config.metric_file_name),
             target_column = schema.name,
             all_params = params,

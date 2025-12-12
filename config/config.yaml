@@ -26,6 +26,7 @@ model_evaluation:
   root_dir: artifacts/model_evaluation
   test_data_path: artifacts/data_transformation/test.csv
   model_path: artifacts/model_training/model.joblib
+  polynomial_feat_extr: artifacts/model_training/polynomial_feat_extr.joblib
   metric_file_name: artifacts/model_evaluation/metrics.json
 
   

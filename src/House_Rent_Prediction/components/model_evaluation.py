@@ -21,30 +21,15 @@ class ModelEvaluation:
     def log_into_mlflow(self):
         test_data = pd.read_csv(self.config.test_data_path)
         model = joblib.load(self.config.model_path)
+        polynomial_feat = joblib.load(self.config.polynomial_feat_extr)
 
         X_test = test_data.drop(columns=[self.config.target_column],axis=1)
         y_test = test_data[[self.config.target_column]]
 
-        mlflow.set_tracking_uri("http://127.0.0.1:5000")
-        mlflow.set_registry_uri("http://127.0.0.1:5000")
+        
+        pred = model.predict(polynomial_feat.transform(X_test))
 
-        tracking_uri_type = urlparse(mlflow.get_tracking_uri()).scheme
+        (rmse,r2) = self.evalute(y_test,pred)
 
-
-        with mlflow.start_run():
-            pred = model.predict(X_test)
-
-            (rmse,r2) = self.evalute(y_test,pred)
-
-            scores = {"rmse_score": rmse, "r2_score": r2}
-            save_json(path = self.config.metric_file_name,data = scores)
-
-            mlflow.log_param(self.config.all_params)
-            mlflow.log_metric("rmse",rmse)
-            mlflow.log_metric("r2_score",r2)
-
-            if tracking_uri_type != "file":
-                mlflow.sklearn.log_model(model,"model",registered_model_name="polynomial_regressor")
-            else:
-                mlflow.sklearn.log_model(model,"model")
-
+        scores = {"rmse_score": rmse, "r2_score": r2}
+        save_json(path = self.config.metric_file_name,data = scores)

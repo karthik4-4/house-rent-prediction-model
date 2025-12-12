@@ -35,6 +35,7 @@ class ModelEvaluationConfig:
     root_dir: Path 
     test_data_path: Path
     model_path: Path
+    polynomial_feat_extr: Path
     metric_file_name: Path
     target_column: str
     all_params : dict

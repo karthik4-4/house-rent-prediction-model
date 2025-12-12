@@ -7,6 +7,10 @@ src/House_Rent_Prediction.egg-info/dependency_links.txt
 src/House_Rent_Prediction.egg-info/top_level.txt
 src/House_Rent_Prediction/components/__init__.py
 src/House_Rent_Prediction/components/data_ingestion.py
+src/House_Rent_Prediction/components/data_transformation.py
+src/House_Rent_Prediction/components/data_validation.py
+src/House_Rent_Prediction/components/model_evaluation.py
+src/House_Rent_Prediction/components/model_training.py
 src/House_Rent_Prediction/config/__init__.py
 src/House_Rent_Prediction/config/configuration.py
 src/House_Rent_Prediction/constants/__init__.py
@@ -14,5 +18,9 @@ src/House_Rent_Prediction/entity/__init__.py
 src/House_Rent_Prediction/entity/config_entity.py
 src/House_Rent_Prediction/pipeline/__init__.py
 src/House_Rent_Prediction/pipeline/st_1_data_ingestion.py
+src/House_Rent_Prediction/pipeline/st_2_data_validation.py
+src/House_Rent_Prediction/pipeline/st_3_data_transformation.py
+src/House_Rent_Prediction/pipeline/st_4_model_training.py
+src/House_Rent_Prediction/pipeline/st_5_model_evaluation.py
 src/House_Rent_Prediction/utils/__init__.py
 src/House_Rent_Prediction/utils/common.py

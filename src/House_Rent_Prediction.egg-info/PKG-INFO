@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: House_Rent_Prediction
 Version: 0.0.0
 Summary: python package for project
@@ -6,37 +6,59 @@ Home-page: https://github.com/karthik4-4/house-rent-prediction-model
 Author: karthik4-4
 Project-URL: Bug Tracker, https://github.com/karthik4-4/house-rent-prediction-model/issues
 Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
 
 # How to run?
 ### STEPS:
 
-Clone the repository
+Clone the repository:
 
 ```bash
-https://github.com/karthik4-4/house-rent-prediction-model
+git clone https://github.com/karthik4-4/house-rent-prediction-model.git
+cd house-rent-prediction-model
 ```
-### STEP 01- Create a conda environment after opening the repository
+
+Create a conda environment:
 
 ```bash
 conda create -n myenv python=3.9 -y
 ```
 
+Activate the environment:
+
 ```bash
 conda activate myenv
 ```
 
+Install the dependencies:
 
-### STEP 02- install the requirements
 ```bash
 pip install -r requirements.txt
 ```
 
+Run the application:
+
 ```bash
-# Finally run the following command
 python app.py
 ```
 
-Now,
-```bash
-open up you local host and port
-```
+Now open your browser and navigate to:
+
+**http://localhost:5000**
+
+(or the port shown in your terminal)
+
+
+## Workflow
+
+1. Update yaml files
+2. Update entity file
+3. Update configuration file in config folder
+4. Update Compenents
+5. Update Pipeline
+6. Update main.py
