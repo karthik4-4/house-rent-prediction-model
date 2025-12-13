@@ -56,7 +56,10 @@ class DataTransformation:
         y_train = y_train.loc[X_train.index]
         y_test = y_test.loc[X_test.index]
         
-        
+        X_test.to_csv(
+            os.path.join(self.config.root_dir, 'ref.csv'),
+            index=False)
+                
         logger.info(f'Scaling and encoding...')
         numeric_cols = X_train.select_dtypes(include='number').columns
         categorical_cols = X_train.select_dtypes(include='object').columns

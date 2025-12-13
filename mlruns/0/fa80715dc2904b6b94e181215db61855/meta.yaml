@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/fa80715dc2904b6b94e181215db61855/artifacts
+end_time: 1765631571071
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fa80715dc2904b6b94e181215db61855
+run_name: abundant-worm-196
+run_uuid: fa80715dc2904b6b94e181215db61855
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765631562215
+status: 3
+tags: []
+user_id: thala
