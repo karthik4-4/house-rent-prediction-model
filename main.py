@@ -42,11 +42,11 @@ if __name__ == '__main__':
         logger.exception(e)
         raise e
     
-    # try:
-    #     logger.info(f'{"#"*4} Starting Model Evaluation {"#"*4}')
-    #     obj = ModelEvaluationPipeline()
-    #     obj.main()
-    #     logger.info(f'{"#"*4} completed Model Evaluation {"#"*4}')
-    # except Exception as e:
-    #     logger.exception(e)
-    #     raise e
+    try:
+        logger.info(f'{"#"*4} Starting Model Evaluation {"#"*4}')
+        obj = ModelEvaluationPipeline()
+        obj.main()
+        logger.info(f'{"#"*4} completed Model Evaluation {"#"*4}')
+    except Exception as e:
+        logger.exception(e)
+        raise e

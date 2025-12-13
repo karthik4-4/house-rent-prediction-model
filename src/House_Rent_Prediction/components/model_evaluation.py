@@ -12,9 +12,8 @@ class ModelEvaluation:
     def __init__(self, config= ModelEvaluationConfig):
         self.config = config
 
-        self.test_set = pd.read_csv(self.config.test_data_path)
-        self.X_test = self.test_set.drop(columns=[self.config.target_column])
-        self.y_test = self.test_set[self.config.target_column]
+        self.X_test = joblib.load(self.config.X_test_path)
+        self.y_test = joblib.load(self.config.y_test_path)
 
         self.model_map = {
             "Polynomial_regressor": {

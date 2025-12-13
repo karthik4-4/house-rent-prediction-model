@@ -64,7 +64,8 @@ class ModelTrainingConfig:
 @dataclass(frozen=True)
 class ModelEvaluationConfig:
     root_dir: Path
-    test_data_path: Path
+    X_test_path: Path
+    y_test_path: Path
     poly_reg_path: Path
     polynomial_feat_extr_path: Path
     random_forest_path: Path
@@ -75,7 +76,6 @@ class ModelEvaluationConfig:
     random_forest_parmas: dict
     xg_boost_params: dict
     mlp_params: dict
-    target_column: str
 
 
 

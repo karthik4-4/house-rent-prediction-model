@@ -95,12 +95,12 @@ class ConfigurationManager:
         random_params = self.params.Random_Forest
         xgboost_params = self.params.XGBoost
         mlp_params = self.params.MLP
-        schema = self.schema.TARGET_COLUMN
 
 
         return ModelEvaluationConfig(
             root_dir = Path(config.root_dir),
-            test_data_path = Path(config.test_data_path),
+            X_test_path = Path(config.X_test_path),
+            y_test_path = Path(config.y_test_path),
             poly_reg_path = Path(config.poly_reg_path),
             polynomial_feat_extr_path = Path(config.polynomial_feat_extr_path),
             random_forest_path = Path(config.random_forest_path),
@@ -111,5 +111,4 @@ class ConfigurationManager:
             random_forest_parmas = random_params,
             xg_boost_params = xgboost_params,
             mlp_params = mlp_params,
-            target_column = schema.name,
         )

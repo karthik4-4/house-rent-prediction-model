@@ -30,7 +30,8 @@ model_training:
 
 model_evaluation:
   root_dir: artifacts/model_evaluation
-  test_data_path: artifacts/data_transformation/test.csv
+  X_test_path: artifacts/data_transformation/X_test.joblib
+  y_test_path: artifacts/data_transformation/y_test.joblib
   poly_reg_path: artifacts/model_training/poly_reg.joblib
   polynomial_feat_extr_path: artifacts/model_training/polynomial_feat_extr.joblib
   random_forest_path: artifacts/model_training/random_forest.joblib
