@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/7f3cf854481043819472532eaee23ad0/artifacts
+end_time: 1765614836470
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7f3cf854481043819472532eaee23ad0
+run_name: welcoming-sow-819
+run_uuid: 7f3cf854481043819472532eaee23ad0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765614823938
+status: 3
+tags: []
+user_id: thala

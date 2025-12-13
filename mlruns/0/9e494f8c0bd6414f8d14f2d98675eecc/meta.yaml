@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/9e494f8c0bd6414f8d14f2d98675eecc/artifacts
+end_time: 1765610231847
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9e494f8c0bd6414f8d14f2d98675eecc
+run_name: gentle-shrike-219
+run_uuid: 9e494f8c0bd6414f8d14f2d98675eecc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765610223685
+status: 4
+tags: []
+user_id: thala

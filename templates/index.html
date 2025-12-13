@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rent Prediction AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>House Rent Prediction</h1>
+        <form action="/predict" method="POST">
+            <div class="form-grid">
+                <!-- Area -->
+                <div class="form-group">
+                    <label for="area">Area (sq ft)</label>
+                    <input type="number" id="area" name="area" placeholder="e.g. 1200" required>
+                </div>
+
+                <!-- Rooms -->
+                <div class="form-group">
+                    <label for="rooms">Rooms</label>
+                    <input type="number" id="rooms" name="rooms" placeholder="e.g. 2" required>
+                </div>
+
+                <!-- Bathrooms -->
+                <div class="form-group">
+                    <label for="bathrooms">Bathrooms</label>
+                    <input type="number" id="bathrooms" name="bathrooms" placeholder="e.g. 2" required>
+                </div>
+
+                <!-- Parking -->
+                <div class="form-group">
+                    <label for="parking_spaces">Parking Spaces</label>
+                    <input type="number" id="parking_spaces" name="parking_spaces" placeholder="e.g. 1" required>
+                </div>
+
+                <!-- Floor -->
+                <div class="form-group">
+                    <label for="floor">Floor Level</label>
+                    <input type="number" id="floor" name="floor" placeholder="e.g. 5" required>
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <select id="city" name="city" required>
+                        <option value="" disabled selected>Select City</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Porto">Porto</option> <!-- From dataset examples safely -->
+                        <option value="Campinas">Campinas</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Sao Paulo">Sao Paulo</option>
+                    </select>
+                </div>
+
+                <!-- Pets -->
+                <div class="form-group">
+                    <label for="pets">Pets Allowed?</label>
+                    <select id="pets" name="pets" required>
+                        <option value="" disabled selected>Select Option</option>
+                        <option value="acept">Yes (Accept)</option>
+                        <option value="not acept">No (Not Accept)</option>
+                    </select>
+                </div>
+
+                <!-- Furnished -->
+                <div class="form-group">
+                    <label for="furnished">Furnishing Status</label>
+                    <select id="furnished" name="furnished" required>
+                        <option value="" disabled selected>Select Option</option>
+                        <option value="furnished">Furnished</option>
+                        <option value="semi-furnished">Semi-Furnished</option>
+                        <option value="not furnished">Unfurnished</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Predict Rent</button>
+        </form>
+    </div>
+</body>
+</html>

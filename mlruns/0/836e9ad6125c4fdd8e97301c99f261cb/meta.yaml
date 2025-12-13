@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/836e9ad6125c4fdd8e97301c99f261cb/artifacts
+end_time: 1765602918011
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 836e9ad6125c4fdd8e97301c99f261cb
+run_name: magnificent-koi-269
+run_uuid: 836e9ad6125c4fdd8e97301c99f261cb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765602905806
+status: 3
+tags: []
+user_id: thala

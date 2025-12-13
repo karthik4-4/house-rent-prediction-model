@@ -3,10 +3,11 @@ import pandas as pd
 import os
 import joblib
 
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression,SGDRegressor
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.neural_network import MLPRegressor
+from sklearn.metrics import r2_score
 from xgboost import XGBRegressor
 
 from House_Rent_Prediction.entity.config_entity import ModelTrainingConfig
@@ -16,19 +17,25 @@ from House_Rent_Prediction import logger
 class ModelTraining:
     def __init__(self, config=ModelTrainingConfig):
         self.config = config
-        self.training_set = pd.read_csv(self.config.train_data_path)
 
-        self.X_train = self.training_set.drop(columns=[self.config.target_column], axis=1)
-        self.y_train = self.training_set[self.config.target_column]  # 1D better for models
-
-
+        self.X_train = joblib.load(self.config.X_train_path)
+        self.X_test = joblib.load(self.config.X_test_path)
+        self.y_train = joblib.load(self.config.y_train_path) 
+        self.y_test = joblib.load(self.config.y_test_path) 
+        
     def train_poly(self):
         logger.info('Starting Polynomial_regrssor')
+        print(self.X_train.shape)
+        print(self.X_test.shape)
+        print(self.y_train.shape)
         poly = PolynomialFeatures(degree=self.config.degree)
         poly_fea = poly.fit_transform(self.X_train)
 
-        lin_reg = LinearRegression()
+        lin_reg = SGDRegressor()
         lin_reg.fit(poly_fea, self.y_train)
+
+        y_pred = lin_reg.predict(poly.transform(self.X_test))
+        print("r2-score: ",r2_score(self.y_test,y_pred))
 
         joblib.dump(poly, os.path.join(self.config.root_dir, "polynomial_feat_extr.joblib"))
         joblib.dump(lin_reg, os.path.join(self.config.root_dir, self.config.model_1))
@@ -47,6 +54,9 @@ class ModelTraining:
         )
 
         rf.fit(self.X_train, self.y_train)
+
+        y_pred = rf.predict(self.X_test)
+        print("r2-score: ",r2_score(self.y_test,y_pred))
 
         joblib.dump(rf, os.path.join(self.config.root_dir, self.config.model_2))
 
@@ -67,6 +77,9 @@ class ModelTraining:
 
         xgb.fit(self.X_train, self.y_train)
 
+        y_pred = xgb.predict(self.X_test)
+        print("r2-score: ",r2_score(self.y_test,y_pred))
+
         joblib.dump(xgb, os.path.join(self.config.root_dir, self.config.model_3))
 
         logger.info('Trained and dumpted xgboost successfully')
@@ -83,6 +96,9 @@ class ModelTraining:
             random_state=42
         )
         mlp.fit(self.X_train, self.y_train)
+
+        y_pred = mlp.predict(self.X_test)
+        print("r2-score: ",r2_score(self.y_test,y_pred))
 
         joblib.dump(mlp, os.path.join(self.config.root_dir, self.config.model_4))
 

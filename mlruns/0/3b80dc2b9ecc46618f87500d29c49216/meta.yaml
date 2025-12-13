@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/3b80dc2b9ecc46618f87500d29c49216/artifacts
+end_time: 1765603100514
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3b80dc2b9ecc46618f87500d29c49216
+run_name: capable-asp-334
+run_uuid: 3b80dc2b9ecc46618f87500d29c49216
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765603086753
+status: 3
+tags: []
+user_id: thala

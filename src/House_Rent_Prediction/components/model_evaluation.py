@@ -5,10 +5,11 @@ import mlflow
 import mlflow.sklearn
 from sklearn.metrics import r2_score, mean_squared_error
 from House_Rent_Prediction.utils.common import save_json
+from House_Rent_Prediction.entity.config_entity import ModelEvaluationConfig
 
 
 class ModelEvaluation:
-    def __init__(self, config):
+    def __init__(self, config= ModelEvaluationConfig):
         self.config = config
 
         self.test_set = pd.read_csv(self.config.test_data_path)
@@ -44,7 +45,7 @@ class ModelEvaluation:
         r2 = r2_score(y_true, y_pred)
         return rmse, r2
 
-    def predict_model(self, model_path, transformer_path=None):
+    def predict_model(self, model_path, transformer_path):
         model = joblib.load(model_path)
 
         if transformer_path:
@@ -80,7 +81,9 @@ class ModelEvaluation:
                     transformer_path=cfg["transformer"]
                 )
 
-                scores[model_name] = {"rmse": rmse, "r2": r2}
+                print(f'{model_name} r2_score is {r2}')
+
+                scores[model_name] = {"rmse": rmse, "r2": r2, "path": str(cfg['model_path'])}
 
                 self.log_model_to_mlflow(
                     model_name=model_name,

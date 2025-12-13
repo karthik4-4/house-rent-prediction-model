@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/71fddd51d5d348d3a93b9cf3adcced69/artifacts
+end_time: 1765609347449
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 71fddd51d5d348d3a93b9cf3adcced69
+run_name: awesome-gull-803
+run_uuid: 71fddd51d5d348d3a93b9cf3adcced69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765609344556
+status: 4
+tags: []
+user_id: thala

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/497496d4167c435e9ad83f797745ca23/artifacts
+end_time: 1765610582849
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 497496d4167c435e9ad83f797745ca23
+run_name: receptive-moth-469
+run_uuid: 497496d4167c435e9ad83f797745ca23
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765610573671
+status: 3
+tags: []
+user_id: thala

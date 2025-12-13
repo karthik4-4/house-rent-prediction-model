@@ -19,7 +19,10 @@ data_transformation:
 
 model_training:
   root_dir: artifacts/model_training
-  train_data_path: artifacts/data_transformation/train.csv
+  X_train_path: artifacts/data_transformation/X_train.joblib
+  X_test_path: artifacts/data_transformation/X_test.joblib
+  y_train_path: artifacts/data_transformation/y_train.joblib
+  y_test_path: artifacts/data_transformation/y_test.joblib
   model_1: poly_reg.joblib
   model_2: random_forest.joblib
   model_3: xgboost.joblib

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/b5db7e752a6b490f88aa2f6b2064356d/artifacts
+end_time: 1765609199938
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b5db7e752a6b490f88aa2f6b2064356d
+run_name: thundering-boar-519
+run_uuid: b5db7e752a6b490f88aa2f6b2064356d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765609190815
+status: 3
+tags: []
+user_id: thala

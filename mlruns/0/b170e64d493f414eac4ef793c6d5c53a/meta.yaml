@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/b170e64d493f414eac4ef793c6d5c53a/artifacts
+end_time: 1765608358108
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b170e64d493f414eac4ef793c6d5c53a
+run_name: stylish-mare-923
+run_uuid: b170e64d493f414eac4ef793c6d5c53a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765608344082
+status: 3
+tags: []
+user_id: thala

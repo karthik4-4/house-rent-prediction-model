@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/d5487a1a85324a66bc33b646588102ed/artifacts
+end_time: 1765603590002
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d5487a1a85324a66bc33b646588102ed
+run_name: righteous-whale-925
+run_uuid: d5487a1a85324a66bc33b646588102ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765603576434
+status: 3
+tags: []
+user_id: thala

@@ -22,12 +22,15 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir : Path
     data_path : Path
+    target_column: str
 
 @dataclass(frozen=True)
 class ModelTrainingConfig:
-    train_data_path: str
+    X_train_path: Path
+    X_test_path: Path
+    y_train_path: Path 
+    y_test_path: Path
     root_dir: str
-    target_column: str
 
     # Polynomial
     model_1: str

@@ -1,5 +1,5 @@
 Polynomial_regression:
-  degree: 4
+  degree: 5
 
 Random_Forest:
   rf_n_estimators: 200

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/874c4f4579e74bf3b87c2b6fa6b1a058/artifacts
+end_time: 1765603980345
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 874c4f4579e74bf3b87c2b6fa6b1a058
+run_name: rumbling-robin-913
+run_uuid: 874c4f4579e74bf3b87c2b6fa6b1a058
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765603970983
+status: 4
+tags: []
+user_id: thala

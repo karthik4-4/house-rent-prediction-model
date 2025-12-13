@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/house-rent-prediction-model/mlruns/0/83bb218b15c949b192d69387dfab00cd/artifacts
+end_time: 1765605184072
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 83bb218b15c949b192d69387dfab00cd
+run_name: adaptable-wren-198
+run_uuid: 83bb218b15c949b192d69387dfab00cd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765605171065
+status: 3
+tags: []
+user_id: thala

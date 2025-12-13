@@ -1,0 +1,19 @@
+artifact_path: Polynomial_regressor
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.25
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 2.2.2
+model_uuid: 0c2a7e2679444a95860fe2566542243c
+run_id: b170e64d493f414eac4ef793c6d5c53a
+utc_time_created: '2025-12-13 06:45:44.129637'

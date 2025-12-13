@@ -35,10 +35,12 @@ class ConfigurationManager:
     def get_data_transform_config(self)->DataTransformationConfig:
         config = self.config.data_transformation
         create_directories([config.root_dir])
+        schema = self.schema.TARGET_COLUMN
 
         return DataTransformationConfig(
             root_dir = Path(config.root_dir),
             data_path = Path(config.data_path),
+            target_column = schema.name,
         )
 
 
@@ -49,13 +51,14 @@ class ConfigurationManager:
         random_params = self.params.Random_Forest
         xgboost_params = self.params.XGBoost
         mlp_params = self.params.MLP
-        schema = self.schema.TARGET_COLUMN
 
 
         return ModelTrainingConfig(
-            train_data_path = Path(config.train_data_path),
+            X_train_path = Path(config.X_train_path),
+            X_test_path = Path(config.X_test_path),
+            y_train_path = Path(config.y_train_path), 
+            y_test_path = Path(config.y_test_path),
             root_dir = Path(config.root_dir),
-            target_column = schema.name,
 
             model_1 = config.model_1,       # Polynomial
             degree = poly_params.degree,
